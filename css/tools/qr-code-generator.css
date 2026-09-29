@@ -1,0 +1,9 @@
+.tool-qr-code-generator #qr-app .tab-btn{
+    background:#1e293b; color:#e2e8f0; padding:8px 12px; margin-right:5px;
+    border:none; border-radius:6px; cursor:pointer;
+  }
+.tool-qr-code-generator #qr-app .tab-active{ background:#3b82f6; color:#fff; }
+.tool-qr-code-generator #qr-app input,.tool-qr-code-generator #qr-app textarea{
+    width:100%; background:#0f172a; border:1px solid #334155;
+    padding:10px; border-radius:6px; color:#e2e8f0; margin-top:5px;
+  }

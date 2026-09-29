@@ -1,0 +1,58 @@
+.tool-discount-calculator .discount-calc{
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+  }
+.tool-discount-calculator .discount-calc h3{
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    color: #202124;
+    text-align: center;
+  }
+.tool-discount-calculator .input-row{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+.tool-discount-calculator .field{
+    flex: 1;
+  }
+.tool-discount-calculator label{
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5f6368;
+    margin-bottom: 4px;
+  }
+.tool-discount-calculator input{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+.tool-discount-calculator .results{
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+.tool-discount-calculator .res-line{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #3c4043;
+  }
+.tool-discount-calculator .final-price{
+    font-size: 16px;
+    font-weight: bold;
+    color: #0d652d;
+  }

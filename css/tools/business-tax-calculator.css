@@ -1,0 +1,62 @@
+.tool-business-tax-calculator{ 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #D7E4D9; 
+            padding: 10px; 
+        }
+.tool-business-tax-calculator .tax-card{ 
+            max-width: 480px; 
+            margin: auto; 
+            background: white; 
+            padding: 25px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            border: 1px solid #e1e4e8; 
+        }
+.tool-business-tax-calculator h2{ 
+            color: #002d5b; 
+            font-size: 20px; 
+            margin-top: 0; 
+            text-align: center; 
+        }
+.tool-business-tax-calculator .input-group{ margin-bottom: 15px; }
+.tool-business-tax-calculator label{ 
+            display: block; 
+            margin-bottom: 5px; 
+            font-weight: bold; 
+            font-size: 14px; 
+            color: #333; 
+        }
+.tool-business-tax-calculator input[type="number"],.tool-business-tax-calculator select{ 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ccc; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            font-size: 16px; 
+            transition: border 0.3s; 
+        }
+.tool-business-tax-calculator input:focus{ border-color: #28a745; outline: none; }
+.tool-business-tax-calculator button{ 
+            background-color: #28a745; 
+            color: white; 
+            border: none; 
+            padding: 14px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            font-weight: bold; 
+            width: 100%; 
+            margin-top: 10px; 
+        }
+.tool-business-tax-calculator button:hover{ background-color: #218838; }
+.tool-business-tax-calculator #result{ 
+            margin-top: 20px; 
+            padding: 15px; 
+            border-radius: 6px; 
+            display: none; 
+            text-align: center; 
+            border: 1px solid #c3e6cb; 
+            background-color: #e9f7ef; 
+        }
+.tool-business-tax-calculator .res-label{ font-size: 14px; color: #555; margin-bottom: 5px; }
+.tool-business-tax-calculator .res-val{ font-weight: bold; color: #d9534f; font-size: 22px; }

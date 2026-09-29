@@ -1,0 +1,4 @@
+/* Shared wrapper for tool pages. Each tool's own styles live in css/tools/<tool>.css, scoped to .tool-<tool>. */
+.tool{border-radius:var(--radius);overflow:hidden}
+.tool canvas,.tool svg{max-width:100%}
+.tool table{display:block;overflow-x:auto}

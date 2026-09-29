@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salaried Person Tax – Naqeebs Multi Services</title>
+<meta name="description" content="Estimate monthly and annual income tax for salaried persons in Pakistan.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Naqeebs Multi Services">
+<meta property="og:title" content="Salaried Person Tax – Naqeebs Multi Services">
+<meta property="og:description" content="Estimate monthly and annual income tax for salaried persons in Pakistan.">
+<!-- Set your real domain, then uncomment: <link rel="canonical" href="https://YOUR-DOMAIN/salaried-person-tax/"> -->
+<link rel="icon" type="image/png" sizes="32x32" href="../img/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../img/logo/favicon-192.png">
+<link rel="apple-touch-icon" href="../img/logo/favicon-192.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/tools.css">
+<link rel="stylesheet" href="../css/tools/salaried-person-tax.css">
+<script defer src="../js/navigation.js"></script>
+<script defer src="../js/main.js"></script>
+<script defer src="../js/tools/salaried-person-tax.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<noscript><p class="wrap"><a href="../index.html">Home</a> · <a href="../services/">Services</a> · <a href="../pricing/">Pricing</a> · <a href="../portfolio/">Portfolio</a> · <a href="../contact-us/">Contact Us</a></p></noscript>
+<main id="main">
+<section class="page-hero"><div class="wrap"><h1>Salaried Person Tax</h1><p>Estimate monthly and annual income tax for salaried persons in Pakistan.</p></div></section><section class="sec"><div class="wrap tool-wrap"><div class="tool tool-salaried-person-tax">
+<div class="container">
+    <div class="card">
+        <h3>Salaried Tax Calculator</h3>
+        <div class="f-group">
+            <label>Monthly Salary (PKR)</label>
+            <input type="number" id="mIn" placeholder="Enter Monthly" oninput="sync()">
+        </div>
+        <div class="f-group">
+            <label>Annual Salary (PKR)</label>
+            <input type="number" id="aIn" placeholder="Total Annual">
+        </div>
+        <div class="f-group">
+            <label>Tax Year</label>
+            <select id="yr">
+                <option value="2027">2026 – 2027</option>
+                <option value="2026">2025 – 2026</option>
+                <option value="2025">2024 – 2025</option>
+                <option value="2024">2023 – 2024</option>
+                <option value="2023">2022 – 2023</option>
+                <option value="2022">2021 – 2022</option>
+                <option value="2021">2020 – 2021</option>
+                <option value="2020">2019 – 2020</option>
+                <option value="2019">2018 – 2019</option>
+                <option value="2018">2017 – 2018</option>
+                <option value="2017">2016 – 2017</option>
+                <option value="2016">2015 – 2016</option>
+                <option value="2015">2014 – 2015</option>
+            </select>
+        </div>
+        <button onclick="run()">Calculate</button>
+        <div id="resBox">
+            <span class="res-text">Monthly Tax:</span>
+            <span class="res-amt" id="mOut"></span>
+            <hr style="border:0; border-top:1px solid #c8e1ff; margin:8px 0;">
+            <span class="res-text">Annual Tax:</span>
+            <span class="res-amt" id="aOut"></span>
+        </div>
+    </div>
+</div>
+</div></div></section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

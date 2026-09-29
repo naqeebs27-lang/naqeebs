@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discount Calculator – Naqeebs Multi Services</title>
+<meta name="description" content="Work out the sale price and how much you save from an original price and a discount percentage.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Naqeebs Multi Services">
+<meta property="og:title" content="Discount Calculator – Naqeebs Multi Services">
+<meta property="og:description" content="Work out the sale price and how much you save from an original price and a discount percentage.">
+<!-- Set your real domain, then uncomment: <link rel="canonical" href="https://YOUR-DOMAIN/discount-calculator/"> -->
+<link rel="icon" type="image/png" sizes="32x32" href="../img/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../img/logo/favicon-192.png">
+<link rel="apple-touch-icon" href="../img/logo/favicon-192.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/tools.css">
+<link rel="stylesheet" href="../css/tools/discount-calculator.css">
+<script defer src="../js/navigation.js"></script>
+<script defer src="../js/main.js"></script>
+<script defer src="../js/tools/discount-calculator.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<noscript><p class="wrap"><a href="../index.html">Home</a> · <a href="../services/">Services</a> · <a href="../pricing/">Pricing</a> · <a href="../portfolio/">Portfolio</a> · <a href="../contact-us/">Contact Us</a></p></noscript>
+<main id="main">
+<section class="page-hero"><div class="wrap"><h1>Discount Calculator</h1><p>Work out the sale price and how much you save from an original price and a discount percentage.</p></div></section><section class="sec"><div class="wrap tool-wrap"><div class="tool tool-discount-calculator">
+<div>
+<div>
+<div class="discount-calc">
+  <h3>Discount Calculator</h3>
+  <div class="input-row">
+    <div class="field">
+      <label for="origPrice">Original Price ($)</label>
+      <input type="number" id="origPrice" value="100" min="0" oninput="calcDiscount()">
+    </div>
+    <div class="field">
+      <label for="discountPct">Discount (%)</label>
+      <input type="number" id="discountPct" value="15" min="0" max="100" oninput="calcDiscount()">
+    </div>
+  </div>
+  <div class="results">
+    <div class="res-line">
+      <span>You Save:</span>
+      <span>$<span id="savings">15.00</span></span>
+    </div>
+    <div class="res-line final-price">
+      <span>Final Price:</span>
+      <span>$<span id="finalPrice">85.00</span></span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div></div></section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

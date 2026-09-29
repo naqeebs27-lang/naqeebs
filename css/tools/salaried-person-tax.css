@@ -1,0 +1,64 @@
+.tool-salaried-person-tax,.tool-salaried-person-tax{ 
+            margin: 0; 
+            padding: 0; 
+            background: #D7E4D9; 
+            overflow: visible; 
+        }
+.tool-salaried-person-tax .container{ 
+            padding: 10px; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+        }
+.tool-salaried-person-tax .card{ 
+            background: #fff; 
+            border: 1px solid #d1d9e0; 
+            border-radius: 10px; 
+            padding: 16px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+        }
+.tool-salaried-person-tax h3{ 
+            margin: 0 0 12px 0; 
+            font-size: 18px; 
+            color: #004a99; 
+            text-align: center; 
+        }
+.tool-salaried-person-tax .f-group{ margin-bottom: 10px; }
+.tool-salaried-person-tax label{ 
+            display: block; 
+            font-size: 12px; 
+            font-weight: bold; 
+            color: #555; 
+            margin-bottom: 4px; 
+        }
+.tool-salaried-person-tax input,.tool-salaried-person-tax select{ 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 6px; 
+            font-size: 15px; 
+            box-sizing: border-box; 
+        }
+.tool-salaried-person-tax button{ 
+            width: 100%; 
+            padding: 12px; 
+            background: #004a99; 
+            color: #fff; 
+            border: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            font-size: 15px; 
+            cursor: pointer; 
+            margin-top: 5px; 
+        }
+.tool-salaried-person-tax #resBox{ 
+            margin-top: 15px; 
+            padding: 12px; 
+            background: #f0f7ff; 
+            border-radius: 6px; 
+            display: none; 
+            border: 1px solid #c8e1ff; 
+            text-align: center; 
+        }
+.tool-salaried-person-tax .res-text{ font-size: 13px; color: #666; }
+.tool-salaried-person-tax .res-amt{ font-size: 20px; font-weight: 800; color: #d9534f; display: block; }

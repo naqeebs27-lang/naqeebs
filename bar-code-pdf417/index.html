@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bar Code PDF417 Generator – Naqeebs Multi Services</title>
+<meta name="description" content="Generate PDF417 barcodes and download them as PNG.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Naqeebs Multi Services">
+<meta property="og:title" content="Bar Code PDF417 Generator – Naqeebs Multi Services">
+<meta property="og:description" content="Generate PDF417 barcodes and download them as PNG.">
+<!-- Set your real domain, then uncomment: <link rel="canonical" href="https://YOUR-DOMAIN/bar-code-pdf417/"> -->
+<link rel="icon" type="image/png" sizes="32x32" href="../img/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../img/logo/favicon-192.png">
+<link rel="apple-touch-icon" href="../img/logo/favicon-192.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/tools.css">
+<link rel="stylesheet" href="../css/tools/bar-code-pdf417.css">
+<script defer src="../js/navigation.js"></script>
+<script defer src="../js/main.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bwip-js@3.0.4/dist/bwip-js-min.js"></script>
+<script defer src="../js/tools/bar-code-pdf417.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<noscript><p class="wrap"><a href="../index.html">Home</a> · <a href="../services/">Services</a> · <a href="../pricing/">Pricing</a> · <a href="../portfolio/">Portfolio</a> · <a href="../contact-us/">Contact Us</a></p></noscript>
+<main id="main">
+<section class="page-hero"><div class="wrap"><h1>Bar Code PDF417 Generator</h1><p>Generate PDF417 barcodes and download them as PNG.</p></div></section><section class="sec"><div class="wrap tool-wrap"><div class="tool tool-bar-code-pdf417">
+<div class="app-container">
+  <div class="panel-left">
+    <h2>PDF417 <span class="info-icon">ⓘ</span> <span style="margin-left:auto;font-size:13px;color:#003366;cursor:pointer;">Create Sequence</span></h2>
+    <label>Data</label>
+    <textarea id="barcodeData" oninput="generatePDF417()">SampleData123</textarea>
+    <div style="margin-top:15px;font-size:13px;color:#555;line-height:1.8;">
+      <input type="checkbox"> Generate one barcode per row <span style="float:right;color:#003366;cursor:pointer;">Refresh</span><br>
+      <input type="checkbox"> Evaluate escape sequences<br>
+      <span style="color:#888;font-size:12px;">Learn more in this <a href="#">video</a> and the <a href="#">Barcode Reference</a></span>
+    </div>
+  </div>
+  <div class="panel-right">
+    <div class="settings-header">
+      <select class="settings-trigger" id="toggleSettings" onchange="if(this.value=='open') toggleSettings()">
+        <option value="">Settings</option>
+        <option value="open">⚙ Open Settings</option>
+      </select>
+    </div>
+    <div class="barcode-display">
+      <canvas id="barcodeCanvas"></canvas>
+      <div style="margin-top:15px;color:#003366;font-size:13px;">Subscribe to Our Free Newsletter!</div>
+    </div>
+    <div id="settingsPanel" class="settings-overlay">
+      <div class="setting-item">
+        <label>Module Width Unit</label>
+        <select><option>Fit (Default)</option></select>
+      </div>
+      <div class="setting-item">
+        <label>Module Width</label>
+        <input type="text" id="modWidth" value="auto" oninput="generatePDF417()">
+      </div>
+      <div class="setting-item">
+        <label>Image Resolution (DPI)</label>
+        <select id="dpiSelect" onchange="generatePDF417()">
+          <option value="96">96</option>
+          <option value="150">150</option>
+          <option value="300">300</option>
+        </select>
+      </div>
+      <div class="setting-item">
+        <label>Image Format</label>
+        <select><option>GIF (Default)</option><option>PNG</option></select>
+      </div>
+      <div class="setting-item">
+        <label>Image Rotation</label>
+        <select><option>0°</option><option>90°</option></select>
+      </div>
+      <button class="close-btn" onclick="toggleSettings()">Close</button>
+    </div>
+    <button class="download-btn" onclick="downloadImage()">
+      <span style="font-size:24px;">📥</span> Download
+    </button>
+  </div>
+</div>
+</div></div></section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

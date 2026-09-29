@@ -1,0 +1,6 @@
+.tool-pdf-to-word{ font-family: sans-serif; padding: 20px; text-align: center; background: #D7E4D9; }
+.tool-pdf-to-word .container{ border: 2px dashed #ccc; padding: 20px; border-radius: 10px; background: white; }
+.tool-pdf-to-word #download-area{ margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; }
+.tool-pdf-to-word canvas{ border: 1px solid #ddd; margin: 10px; max-width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.tool-pdf-to-word button{ background: #4285f4; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+.tool-pdf-to-word button:hover{ background: #357ae8; }

@@ -1,0 +1,108 @@
+.tool-bar-code-pdf417{
+    font-family: sans-serif;
+    background-color: #D7E4D9; 
+    margin: 0;
+    padding: 20px;
+    display: block; 
+  }
+.tool-bar-code-pdf417 .app-container{
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border: 1px solid #ccc;
+    max-width: 950px;
+    min-height: 550px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+.tool-bar-code-pdf417 .panel-left{
+    flex: 1.2;
+    padding: 20px;
+    border-right: 1px solid #eee;
+  }
+.tool-bar-code-pdf417 h2{
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+.tool-bar-code-pdf417 .info-icon{ color: #003366; font-size: 14px; cursor: help; }
+.tool-bar-code-pdf417 textarea{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: monospace;
+    resize: vertical;
+  }
+.tool-bar-code-pdf417 .panel-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: relative;
+  }
+.tool-bar-code-pdf417 .settings-header{
+    background: #f8f8f8;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #ddd;
+  }
+.tool-bar-code-pdf417 .barcode-display{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    overflow: hidden;
+  }
+.tool-bar-code-pdf417 canvas{ max-width: 100%; height: auto !important; }
+.tool-bar-code-pdf417 .settings-overlay{
+    position: absolute;
+    top: 41px; right: 0; bottom: 60px; left: 0;
+    background: white;
+    padding: 20px;
+    display: none;
+    z-index: 10;
+    overflow-y: auto;
+  }
+.tool-bar-code-pdf417 .setting-item{ margin-bottom: 15px; }
+.tool-bar-code-pdf417 label{ display: block; font-size: 13px; color: #666; margin-bottom: 5px; }
+.tool-bar-code-pdf417 select,.tool-bar-code-pdf417 input{ width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box; }
+.tool-bar-code-pdf417 .download-btn{
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+.tool-bar-code-pdf417 .download-btn:hover{ background: #b71c1c; }
+.tool-bar-code-pdf417 .close-btn{
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    float: right;
+    border-radius: 3px;
+  }
+.tool-bar-code-pdf417 .settings-trigger{
+    cursor: pointer;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 3px;
+  }

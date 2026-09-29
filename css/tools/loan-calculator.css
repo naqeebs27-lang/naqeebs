@@ -1,0 +1,34 @@
+.tool-loan-calculator,.tool-loan-calculator *{ box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.tool-loan-calculator{ background-color: #D7E4D9; color: #333; padding: 20px; overflow-y: auto; }
+.tool-loan-calculator .container{ max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; }
+.tool-loan-calculator .header{ background: #0f172a; color: #fff; padding: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+.tool-loan-calculator .header h2{ font-size: 24px; margin-bottom: 5px; }
+.tool-loan-calculator .header p{ font-size: 13px; color: #94a3b8; }
+.tool-loan-calculator .controls{ display: flex; gap: 10px; align-items: center; }
+.tool-loan-calculator .select-box,.tool-loan-calculator .btn-export{ padding: 8px 14px; border-radius: 6px; border: none; font-size: 13px; font-weight: 600; cursor: pointer; }
+.tool-loan-calculator .select-box{ background: #1e293b; color: #fff; border: 1px solid #334155; }
+.tool-loan-calculator .btn-export{ background: #ef4444; color: #fff; text-decoration: none; }
+.tool-loan-calculator .presets{ background: #1e293b; padding: 12px 24px; display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px solid #334155; }
+.tool-loan-calculator .preset-btn{ background: #334155; color: #cbd5e1; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; transition: 0.2s; }
+.tool-loan-calculator .preset-btn:hover{ background: #2563eb; color: #fff; }
+.tool-loan-calculator .calculator-body{ display: grid; grid-template-columns: 1fr 380px; gap: 24px; padding: 24px; }
+@media (max-width: 850px){.tool-loan-calculator .calculator-body{ grid-template-columns: 1fr; }}
+.tool-loan-calculator .input-group{ background: #f8fafc; padding: 18px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 16px; }
+.tool-loan-calculator .input-label{ display: flex; justify-content: space-between; font-weight: 600; font-size: 14px; margin-bottom: 10px; }
+.tool-loan-calculator .val-display{ color: #2563eb; font-weight: 700; }
+.tool-loan-calculator input[type=range]{ width: 100%; height: 6px; background: #cbd5e1; border-radius: 5px; outline: none; margin-top: 8px; accent-color: #2563eb; }
+.tool-loan-calculator .pills{ display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.tool-loan-calculator .pill{ background: #e2e8f0; border: none; padding: 4px 10px; border-radius: 4px; font-size: 11px; cursor: pointer; font-weight: 600; }
+.tool-loan-calculator .pill:hover{ background: #cbd5e1; }
+.tool-loan-calculator .result-card{ background: #0f172a; color: #fff; border-radius: 10px; padding: 20px; text-align: center; margin-bottom: 20px; }
+.tool-loan-calculator .result-card .sub{ font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; }
+.tool-loan-calculator .result-card .emi-val{ font-size: 28px; font-weight: 700; color: #38bdf8; margin: 8px 0; }
+.tool-loan-calculator .breakdown-row{ display: flex; justify-content: space-between; border-top: 1px solid #334155; padding-top: 12px; margin-top: 12px; font-size: 13px; }
+.tool-loan-calculator .chart-box{ background: #f8fafc; padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center; }
+.tool-loan-calculator .chart-wrapper{ position: relative; height: 200px; margin-top: 10px; }
+.tool-loan-calculator .schedule-section{ padding: 0 24px 24px; }
+.tool-loan-calculator .schedule-section h3{ font-size: 16px; margin-bottom: 12px; color: #0f172a; }
+.tool-loan-calculator .table-responsive{ max-height: 300px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 8px; }
+.tool-loan-calculator table{ width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+.tool-loan-calculator th{ background: #f1f5f9; padding: 10px 12px; position: sticky; top: 0; color: #475569; font-weight: 600; }
+.tool-loan-calculator td{ padding: 10px 12px; border-bottom: 1px solid #e2e8f0; color: #334155; }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR Code Generator – Naqeebs Multi Services</title>
+<meta name="description" content="Create QR codes for URLs, text, WiFi, email and vCards and download them as PNG.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Naqeebs Multi Services">
+<meta property="og:title" content="QR Code Generator – Naqeebs Multi Services">
+<meta property="og:description" content="Create QR codes for URLs, text, WiFi, email and vCards and download them as PNG.">
+<!-- Set your real domain, then uncomment: <link rel="canonical" href="https://YOUR-DOMAIN/qr-code-generator/"> -->
+<link rel="icon" type="image/png" sizes="32x32" href="../img/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../img/logo/favicon-192.png">
+<link rel="apple-touch-icon" href="../img/logo/favicon-192.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/tools.css">
+<link rel="stylesheet" href="../css/tools/qr-code-generator.css">
+<script defer src="../js/navigation.js"></script>
+<script defer src="../js/main.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script defer src="../js/tools/qr-code-generator.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<noscript><p class="wrap"><a href="../index.html">Home</a> · <a href="../services/">Services</a> · <a href="../pricing/">Pricing</a> · <a href="../portfolio/">Portfolio</a> · <a href="../contact-us/">Contact Us</a></p></noscript>
+<main id="main">
+<section class="page-hero"><div class="wrap"><h1>QR Code Generator</h1><p>Create QR codes for URLs, text, WiFi, email and vCards and download them as PNG.</p></div></section><section class="sec"><div class="wrap tool-wrap"><div class="tool tool-qr-code-generator">
+<div id="qr-app" style="background:#0f172a;color:#e2e8f0;font-family:sans-serif;padding:20px;">
+  <h2 style="color:#3b82f6;margin-top:0;">QR Code Pro Generator</h2>
+  <p style="color:#94a3b8;font-size:14px;">Select a type and generate your code</p>
+  <div style="margin:15px 0;">
+    <button onclick="switchTab('URL')" id="btn-URL" class="tab-btn">🔗 URL</button>
+    <button onclick="switchTab('Text')" id="btn-Text" class="tab-btn">📝 Text</button>
+    <button onclick="switchTab('WiFi')" id="btn-WiFi" class="tab-btn">📶 WiFi</button>
+    <button onclick="switchTab('Email')" id="btn-Email" class="tab-btn">✉️ Email</button>
+    <button onclick="switchTab('vCard')" id="btn-vCard" class="tab-btn">📇 vCard</button>
+  </div>
+  <div>
+    <h3 id="tab-title" style="color:#3b82f6;">Enter URL</h3>
+    <div id="input-container"></div>
+    <button onclick="generateQR()" style="margin-top:10px;background:#059669;color:white;padding:10px 15px;border:none;border-radius:6px;cursor:pointer;">
+      Generate QR Code
+    </button>
+  </div>
+  <div style="margin-top:20px;text-align:center;">
+    <div id="qrcode" style="background:white;padding:10px;display:inline-block;"></div>
+    <br>
+    <button onclick="downloadQR()" style="margin-top:10px;color:#94a3b8;text-decoration:underline;background:none;border:none;cursor:pointer;">
+      Download PNG
+    </button>
+  </div>
+</div>
+</div></div></section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+.tool-age-calculator{
+            --primary-blue: #003366;
+            --result-green: #5d8233;
+            --bg-gray: #D7E4D9; 
+        }
+.tool-age-calculator{
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-gray);
+            margin: 0;
+            padding: 10px; 
+            display: flex;
+            justify-content: center;
+        }
+.tool-age-calculator .calculator-card{
+            background: #fff;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+.tool-age-calculator .header{
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 15px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-align: center;
+        }
+.tool-age-calculator .input-container{
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+.tool-age-calculator .field-group{
+            margin-bottom: 15px;
+        }
+.tool-age-calculator label{
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 6px;
+        }
+.tool-age-calculator input[type="date"]{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px; 
+            font-family: inherit;
+            box-sizing: border-box;
+            outline: none;
+            -webkit-appearance: none; 
+        }
+.tool-age-calculator .calc-btn{
+            width: 100%;
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: transform 0.1s, background 0.3s;
+        }
+.tool-age-calculator .calc-btn:active{
+            transform: scale(0.98); 
+        }
+.tool-age-calculator #resultSection{
+            display: none;
+            animation: slideDown 0.4s ease-out;
+        }
+.tool-age-calculator .result-banner{
+            background-color: var(--result-green);
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+.tool-age-calculator .result-body{
+            padding: 20px;
+            line-height: 1.6;
+        }
+.tool-age-calculator .age-main{
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+.tool-age-calculator .age-main strong{
+            display: block;
+            font-size: 1.5rem;
+            color: #000;
+            margin-top: 5px;
+            word-wrap: break-word; 
+        }
+.tool-age-calculator .age-stats{
+            font-size: 0.95rem;
+            color: #555;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+@keyframes slideDown{
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+@media (max-width: 360px){.tool-age-calculator .header{ font-size: 1.1rem; }
+.tool-age-calculator .age-main strong{ font-size: 1.2rem; }
+.tool-age-calculator .result-body{ padding: 15px; }}

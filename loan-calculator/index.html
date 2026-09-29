@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loan Calculator – Naqeebs Multi Services</title>
+<meta name="description" content="Loan EMI calculator with interest breakdown, payment chart and amortization schedule.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Naqeebs Multi Services">
+<meta property="og:title" content="Loan Calculator – Naqeebs Multi Services">
+<meta property="og:description" content="Loan EMI calculator with interest breakdown, payment chart and amortization schedule.">
+<!-- Set your real domain, then uncomment: <link rel="canonical" href="https://YOUR-DOMAIN/loan-calculator/"> -->
+<link rel="icon" type="image/png" sizes="32x32" href="../img/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../img/logo/favicon-192.png">
+<link rel="apple-touch-icon" href="../img/logo/favicon-192.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/tools.css">
+<link rel="stylesheet" href="../css/tools/loan-calculator.css">
+<script defer src="../js/navigation.js"></script>
+<script defer src="../js/main.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="../js/tools/loan-calculator.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<noscript><p class="wrap"><a href="../index.html">Home</a> · <a href="../services/">Services</a> · <a href="../pricing/">Pricing</a> · <a href="../portfolio/">Portfolio</a> · <a href="../contact-us/">Contact Us</a></p></noscript>
+<main id="main">
+<section class="page-hero"><div class="wrap"><h1>Loan Calculator</h1><p>Loan EMI calculator with interest breakdown, payment chart and amortization schedule.</p></div></section><section class="sec"><div class="wrap tool-wrap"><div class="tool tool-loan-calculator">
+<div class="container">
+  <!-- Top Bar -->
+  <div class="header">
+    <div>
+      <h2>Loan EMI Calculator</h2>
+      <p>Calculate monthly installments, interest breakdown, and generate printable reports.</p>
+    </div>
+    <div class="controls">
+      <select id="currency" class="select-box" onchange="calculateEMI()">
+        <option value="PKR (Rs.)">PKR (Rs.)</option>
+        <option value="USD ($)">USD ($)</option>
+        <option value="EUR (€)">EUR (€)</option>
+      </select>
+      <button class="btn-export" onclick="window.print()">Export PDF / Print</button>
+    </div>
+  </div>
+  <!-- Presets -->
+  <div class="presets">
+    <button class="preset-btn" onclick="applyPreset(10000000, 16.5, 20)">Home Loan (1 Crore)</button>
+    <button class="preset-btn" onclick="applyPreset(1000000, 18, 5)">Personal Loan (10 Lakhs)</button>
+    <button class="preset-btn" onclick="applyPreset(3500000, 17.5, 7)">Car Loan (35 Lakhs)</button>
+    <button class="preset-btn" onclick="applyPreset(20000000, 15, 10)">Business Loan (2 Crores)</button>
+  </div>
+  <!-- Main Inputs & Summary -->
+  <div class="calculator-body">
+    <div class="inputs-col">
+      <!-- Amount -->
+      <div class="input-group">
+        <div class="input-label">
+          <span>Loan Amount</span>
+          <span class="val-display" id="amountVal">PKR 5,000,000</span>
+        </div>
+        <input type="range" id="amount" min="100000" max="50000000" step="100000" value="5000000" oninput="calculateEMI()">
+        <div class="pills">
+          <button class="pill" onclick="setVal('amount', 500000)">5 Lakhs</button>
+          <button class="pill" onclick="setVal('amount', 2500000)">25 Lakhs</button>
+          <button class="pill" onclick="setVal('amount', 5000000)">50 Lakhs</button>
+          <button class="pill" onclick="setVal('amount', 10000000)">1 Crore</button>
+        </div>
+      </div>
+      <!-- Interest Rate -->
+      <div class="input-group">
+        <div class="input-label">
+          <span>Annual Interest Rate (%)</span>
+          <span class="val-display" id="rateVal">16.5%</span>
+        </div>
+        <input type="range" id="rate" min="5" max="30" step="0.1" value="16.5" oninput="calculateEMI()">
+      </div>
+      <!-- Tenure -->
+      <div class="input-group">
+        <div class="input-label">
+          <span>Loan Tenure (Years)</span>
+          <span class="val-display" id="tenureVal">20 Years</span>
+        </div>
+        <input type="range" id="tenure" min="1" max="30" step="1" value="20" oninput="calculateEMI()">
+      </div>
+    </div>
+    <!-- Results Column -->
+    <div class="results-col">
+      <div class="result-card">
+        <div class="sub">Monthly Payable EMI</div>
+        <div class="emi-val" id="emiResult">PKR 0</div>
+        <div class="breakdown-row">
+          <span>Principal Amount</span>
+          <strong id="principalResult">PKR 0</strong>
+        </div>
+        <div class="breakdown-row">
+          <span>Total Interest</span>
+          <strong id="interestResult">PKR 0</strong>
+        </div>
+        <div class="breakdown-row">
+          <span>Total Amount Payable</span>
+          <strong id="totalPayableResult">PKR 0</strong>
+        </div>
+      </div>
+      <div class="chart-box">
+        <h4 style="font-size:13px; color:#64748b;">Loan Payment Split</h4>
+        <div class="chart-wrapper">
+          <canvas id="splitChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Amortization Schedule Table -->
+  <div class="schedule-section">
+    <h3>Amortization Schedule (First 12 Months)</h3>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Principal Paid</th>
+            <th>Interest Paid</th>
+            <th>Total Payment</th>
+            <th>Remaining Balance</th>
+          </tr>
+        </thead>
+        <tbody id="scheduleBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div></div></section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

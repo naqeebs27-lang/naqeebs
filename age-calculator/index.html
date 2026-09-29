@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Age Calculator – Naqeebs Multi Services</title>
+<meta name="description" content="Calculate your exact age in years, months, days, hours and seconds.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Naqeebs Multi Services">
+<meta property="og:title" content="Age Calculator – Naqeebs Multi Services">
+<meta property="og:description" content="Calculate your exact age in years, months, days, hours and seconds.">
+<!-- Set your real domain, then uncomment: <link rel="canonical" href="https://YOUR-DOMAIN/age-calculator/"> -->
+<link rel="icon" type="image/png" sizes="32x32" href="../img/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../img/logo/favicon-192.png">
+<link rel="apple-touch-icon" href="../img/logo/favicon-192.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/tools.css">
+<link rel="stylesheet" href="../css/tools/age-calculator.css">
+<script defer src="../js/navigation.js"></script>
+<script defer src="../js/main.js"></script>
+<script defer src="../js/tools/age-calculator.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<noscript><p class="wrap"><a href="../index.html">Home</a> · <a href="../services/">Services</a> · <a href="../pricing/">Pricing</a> · <a href="../portfolio/">Portfolio</a> · <a href="../contact-us/">Contact Us</a></p></noscript>
+<main id="main">
+<section class="page-hero"><div class="wrap"><h1>Age Calculator</h1><p>Calculate your exact age in years, months, days, hours and seconds.</p></div></section><section class="sec"><div class="wrap tool-wrap"><div class="tool tool-age-calculator">
+<div class="calculator-card">
+    <div class="header">Age Calculator</div>
+    <div class="input-container">
+        <div class="field-group">
+            <label>Date of Birth</label>
+            <input type="date" id="dobPicker">
+        </div>
+        <div class="field-group">
+            <label>Age at the Date of</label>
+            <input type="date" id="targetPicker">
+        </div>
+        <button class="calc-btn" onclick="runCalculation()">Calculate Age</button>
+    </div>
+    <div id="resultSection">
+        <div class="result-banner">
+            Result <span>💾</span>
+        </div>
+        <div class="result-body">
+            <div class="age-main">
+                Age:
+                <strong id="primaryResult"></strong>
+            </div>
+            <div class="age-stats" id="secondaryStats"></div>
+        </div>
+    </div>
+</div>
+</div></div></section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
