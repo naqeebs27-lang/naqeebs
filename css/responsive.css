@@ -9,6 +9,9 @@
   .has-sub:hover>.sub,.has-sub:focus-within>.sub{display:none}
   .has-sub.open>.sub{display:block}
   .header-cta{display:none}
+  /* show mobile-specific CTA inside the hamburger menu */
+  .mobile-cta{display:block}
+  .mobile-cta .btn{width:100%;justify-content:center}
 }
 @media (max-width:992px){
   .foot-grid{grid-template-columns:1fr 1fr}

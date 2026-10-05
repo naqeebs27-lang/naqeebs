@@ -46,6 +46,8 @@ p{margin:0 0 1em}
 .nav-toggle[aria-expanded="true"]::before{top:21px;transform:rotate(45deg)}
 .nav-toggle[aria-expanded="true"] span{opacity:0}
 .nav-toggle[aria-expanded="true"]::after{top:21px;transform:rotate(-45deg)}
+/* Mobile menu CTA: hidden on desktop */
+.mobile-cta{display:none}
 
 /* Hero & sections */
 .hero{background:linear-gradient(135deg,var(--primary-dark),var(--primary-color) 60%,#2f63d6);color:#fff;text-align:center;padding:clamp(3rem,8vw,5.5rem) 0 clamp(4rem,9vw,7rem)}
